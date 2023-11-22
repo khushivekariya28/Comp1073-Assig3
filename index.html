@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Pizza Order Form</h1>
+    </header>
+
+    <main>
+        <form id="pizzaForm">
+            <label for="pizzaSize">Select Pizza Size:</label>
+            <select id="pizzaSize" name="pizzaSize">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="breadType">Select Bread Type:</label>
+            <select id="breadType" name="breadType">
+                <option value="regular">Regular</option>
+                <option value="wholegrain">Whole Grain</option>
+                <option value="thin">Thin Crust</option>
+            </select>
+
+            <label for="toppings">Select Toppings:</label>
+            <div id="toppings">
+                <input type="checkbox" id="onions" name="topping" value="onions">
+                <label for="onions">Onions</label>
+                
+                <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label>
+                
+                <input type="checkbox" id="olives" name="topping" value="olives">
+                <label for="olives">Olives</label>
+            </div>
+
+            <label for="extraCheese">Extra Cheese:</label>
+            <input type="checkbox" id="extraCheese" name="extraCheese" value="true">
+
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <button type="button" onclick="submitOrder()">Order</button>
+        </form>
+
+        <div id="pizzaOutput"></div>
+    </main>
+
+    <footer>
+        <p id="studentInfo"></p>
+    </footer>
+
+    <script>
+        const studentInfo = document.getElementById('studentInfo');
+        studentInfo.innerHTML = 'Student ID: 200543219<br>Student Name: Khushi Vekariya';
+    </script>
+
+</body>
+</html>
